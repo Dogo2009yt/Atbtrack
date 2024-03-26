@@ -1,0 +1,95 @@
+#profilo{
+    width: 89px;
+    height: 89px;
+    position: relative;
+    top: -290px;
+    left: 100px;
+}
+#ciao{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+    position: relative;
+    top:-390px;
+    left: 220px;
+    color: white;
+}
+#b1{
+    height: 70px;
+    width: 700px;
+    background-color: white;
+    position: relative;
+    top :-390px;
+    left: calc(50% - 350px);
+    border-radius: 20px;
+}
+#b1 a{
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #E80101;
+    font-size: xx-large;
+    position: relative;
+    top: 15px;
+}
+#b2{
+    height: 70px;
+    width: 700px;
+    background-color: white;
+    position: relative;
+    top :-370px;
+    left: calc(50% - 350px);
+    border-radius: 20px;
+}
+#b2 a{
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #E80101;
+    font-size: xx-large;
+    position: relative;
+    top: 15px;
+}
+#b3{
+    height: 70px;
+    width: 700px;
+    background-color: white;
+    position: relative;
+    top :-350px;
+    left: calc(50% - 350px);
+    border-radius: 20px;
+}
+#b3 a{
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #E80101;
+    font-size: xx-large;
+    position: relative;
+    top: 15px;
+}
+#b4{
+    height: 70px;
+    width: 700px;
+    background-color: white;
+    position: relative;
+    top :-330px;
+    left: calc(50% - 350px);
+    border-radius: 20px;
+}
+#b4 a{
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #E80101;
+    font-size: xx-large;
+    position: relative;
+    top: 15px;
+}
+#riemp{
+    height: 70px;
+    width: 700px;
+    position: relative;
+    top :-20px;
+    left: calc(50% - 350px);
+    border-radius: 20px;
+}

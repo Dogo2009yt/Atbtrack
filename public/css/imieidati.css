@@ -1,0 +1,52 @@
+#mail{
+    height: 75px;
+    width: 700px;
+    background-color: white;
+    border-radius: 30px;
+    position: relative;
+    left: calc(50% - 350px);
+    top:-250px;
+    cursor: pointer;
+}
+#mail p{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: xx-large;
+    text-align: center;
+    position: relative;
+    top: 20px;
+}
+#pass{
+    height: 75px;
+    width: 700px;
+    background-color: white;
+    border-radius: 30px;
+    position: relative;
+    left: calc(50% - 350px);
+    top:-250px;
+    cursor: pointer;
+}
+#pass p{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: xx-large;
+    text-align: center;
+    position: relative;
+    top: 20px;
+}
+#pag{
+    height: 75px;
+    width: 700px;
+    background-color: white;
+    border-radius: 30px;
+    position: relative;
+    left: calc(50% - 350px);
+    top:-250px;
+    cursor: pointer;
+}
+#pag p{
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: xx-large;
+    text-align: center;
+    position: relative;
+    top: 20px;
+}

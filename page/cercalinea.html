@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.0.0/maps/maps-web.min.js"></script>
+    <title>Atb Track - Cerca Linea</title>
+    <link rel="icon" href="/img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/abbonamenti.css">
+    <script src="js/cercalinea.js"></script>
+</head>
+<body>
+    <div class="container">
+        <a href="/">
+            <div class="home">
+                <img src="img/home_icon-icons.com_73532.svg" alt="Home" href="index.html">
+            </div>
+        </a>
+        <a href="/">
+            <div class="torna_indietro">
+                <img src="img/torna indietro.svg" alt="Torna indietro" href="index.html">
+            </div>
+        </a>
+        <div class="change">
+            <img src="img/cambia lingua.svg" alt="Cambiolingua" onclick="CambiaLingua()">
+            <div class="cambiolingua" id="Menucambio">
+                <a href="/abbonamenti">Italiano</a>
+                <a href="/abbing">English</a>
+            </div>
+        </div>
+        <div class="logo">
+            <img src="/img/logo.png" class="logoimg" alt="Logo">
+        </div>
+        <a href="/faq">
+            <div class="domande">
+                <img src="img/faq.svg" alt="Faq" href="faq.html">
+            </div>
+        
+        </a>
+        <div class="menu">
+            <img src="img/menu.svg" alt="menu" onclick="Menu()">
+            <div class="menuu" id="Menu">
+                <a href="/">Home</a>
+                <a href="/">Torna indietro</a>
+                <a onclick="CambiaLingua()">Cambia lingua</a>
+                <a href="/faq">Faq</a>
+            </div>
+        </div>
+        <div class="cercabutton">
+            <a href="/selezionalinea" class="selezionalinea"> Seleziona linea </a>
+        </div>
+    </div>
+    <div class="map" style="width: 100%; height: 100%; position: absolute; top:70px; z-index: 0;">
+        <div id="map" style="width: 100%; height: 100%;"></div>
+
+        <script>
+         // Imposta la posizione e lo zoom iniziali
+         var map = L.map('map');
+         var zoom = 17;
+
+    // Ottieni la posizione dell'utente
+        navigator.geolocation.getCurrentPosition(function(position) {
+            var lat = position.coords.latitude;
+            var lng = position.coords.longitude;
+
+        // Imposta la mappa con la posizione dell'utente
+            map.setView([lat, lng], zoom);
+
+            L.tileLayer('https://{s}.api.tomtom.com/map/1/tile/basic/main/{z}/{x}/{y}.png?tileSize=512&key=DGdFTJH7Xmu8Mw9mInaiPOqOIxbiPSpu', {
+            }).addTo(map);
+
+        // Aggiungi un marker nella posizione dell'utente
+            var marker = L.marker([lat, lng]).addTo(map);
+
+        // Aggiungi una popup al marker (opzionale)
+            marker.bindPopup('La tua posizione').openPopup();
+        },function(error) {
+        console.error('Errore nella geolocalizzazione:', error.message);
+        });
+            // Icona personalizzata per il marker del POI
+        var poiIcon = L.icon({
+                iconUrl: '/img/Fermata.png', // Sostituisci con il percorso del tuo file immagine
+                iconSize: [32, 32], // Dimensioni dell'icona
+                iconAnchor: [16, 32], // Posizione dell'ancora rispetto all'icona
+                popupAnchor: [0, -32] // Posizione del popup rispetto all'icona
+        })
+
+            // 77 fermate
+            var Antenna = L.marker([45.64752869637312, 9.601944944225307], {icon: poiIcon}).addTo(map);
+            var donCortesi = L.marker([45.639187339439864, 9.619020600367191], {icon: poiIcon}).addTo(map);
+            var donSeghezzi = L.marker([45.64019143794658, 9.617292082756745], {icon: poiIcon}).addTo(map);
+            var Beltremelli = L.marker([45.639411654009464, 9.616291435743596], {icon: poiIcon}).addTo(map);
+            var levate = L.marker([45.63937051709877, 9.614367708021515], {icon: poiIcon}).addTo(map);
+            var A4 = L.marker([45.64433908464386, 9.619935182509748], {icon: poiIcon}).addTo(map);
+            var betelli = L.marker([45.652969476822875, 9.603419887707755], {icon: poiIcon}).addTo(map);
+            var viamariano = L.marker([45.64065754724663, 9.588357084317787], {icon: poiIcon}).addTo(map);
+            var betelli21 = L.marker([45.651047487664194, 9.602404049933368], {icon: poiIcon}).addTo(map);
+            var locresia = L.marker([45.6464445138953, 9.608009711303856], {icon: poiIcon}).addTo(map);
+            var tiraboschi = L.marker([45.636083315737984, 9.586768672674339], {icon: poiIcon}).addTo(map);
+            var pirovano = L.marker([45.64964009854105, 9.60751259966041], {icon: poiIcon}).addTo(map);
+            var abruzzo = L.marker([45.64771751034515, 9.617735830345651], {icon: poiIcon}).addTo(map);
+            var pesenti = L.marker([45.64934749949889, 9.584637711303854], {icon: poiIcon}).addTo(map);
+            var locatelli11 = L.marker([45.64518726365761, 9.616573416950548], {icon: poiIcon}).addTo(map);
+            var velodromo = L.marker([45.63989579509875, 9.614355093011616], {icon: poiIcon}).addTo(map);
+            var ABB = L.marker([45.66682773311862, 9.63366522482523], {icon: poiIcon}).addTo(map);
+            var SS525 = L.marker([45.63514456987056, 9.60732624022702], {icon: poiIcon}).addTo(map);
+            var sofra = L.marker([45.65089449184897, 9.611092711303854], {icon: poiIcon}).addTo(map);
+            var viamarconi = L.marker([45.64839301346768, 9.600741606100758], {icon: poiIcon}).addTo(map);
+            var viaverdi = L.marker([45.65081162642112, 9.598128902805463], {icon: poiIcon}).addTo(map);
+            var viaverdiitis = L.marker([45.650691629936865, 9.593708622447767], {icon: poiIcon}).addTo(map);
+            var alme = L.marker([45.73920888513064, 9.60908596918912], {icon: poiIcon}).addTo(map);
+            var paladinaghiaie = L.marker([45.72672208601194, 9.60033755575929], {icon: poiIcon}).addTo(map);
+            var paladinasobreno = L.marker([45.72652865704191, 9.61191632648999], {icon: poiIcon}).addTo(map);
+            var paladinacarminati6 = L.marker([45.73222897979566, 9.60670059680552], {icon: poiIcon}).addTo(map);
+            var paladinacarminati = L.marker([45.73258701019333, 9.60670059680552], {icon: poiIcon}).addTo(map);
+            var paladinalpini = L.marker([45.72797713433652, 9.607406963594768], {icon: poiIcon}).addTo(map);
+            var paladinagalilei = L.marker([45.72453731960631, 9.60731409765416], {icon: poiIcon}).addTo(map);
+            var valbrembomatteotti = L.marker([45.71197555402456, 9.606348347937766], {icon: poiIcon}).addTo(map);
+            var valbrembocornelle = L.marker([45.71610361266301, 9.601060905378501], {icon: poiIcon}).addTo(map);
+            var paladinanovembre = L.marker([45.727046215868555, 9.60808033327368], {icon: poiIcon}).addTo(map);
+            var paladinabolis = L.marker([45.72701715952147, 9.610147052651412], {icon: poiIcon}).addTo(map);
+            var valbremboroma = L.marker([45.71995298697504, 9.60946895513533], {icon: poiIcon}).addTo(map);
+            var briolopaglia = L.marker([45.71033501917595, 9.591473406853355], {icon: poiIcon}).addTo(map);
+            var PsPberizzi = L.marker([45.69648809104077, 9.57786864852818], {icon: poiIcon}).addTo(map);
+            var PsPvittemanuele = L.marker([45.695974877088325, 9.59127127198434], {icon: poiIcon}).addTo(map);
+            var Curnoemilia = L.marker([45.68927948032961, 9.593944480982659], {icon: poiIcon}).addTo(map);
+            var valbrembomoro = L.marker([45.71180117758355, 9.607830923099106], {icon: poiIcon}).addTo(map);
+            var mozzomozzi = L.marker([45.70155401497781, 9.59984317349839], {icon: poiIcon}).addTo(map);
+            var mozzoalighieri = L.marker([45.69679395241529, 9.600348939791397], {icon: poiIcon}).addTo(map);
+            var crocettemozzo = L.marker([45.69380164786204, 9.605870542286238], {icon: poiIcon}).addTo(map);
+            var crocettecurno = L.marker([45.693394378661765, 9.610507315967995], {icon: poiIcon}).addTo(map);
+            var valbrembosombreno = L.marker([45.71518444453282, 9.622555406848548], {icon: poiIcon}).addTo(map);
+            var madonnadelbosco = L.marker([45.703433909286964, 9.629218274075091], {icon: poiIcon}).addTo(map);
+            var mottolichiesa = L.marker([45.69375420807221, 9.63165599156438], {icon: poiIcon}).addTo(map);
+            var bergamocrocerossa = L.marker([45.69350007503972, 9.643785006900051], {icon: poiIcon}).addTo(map);
+            var bergamoportanuova = L.marker([45.69379618108466, 9.670052136124369], {icon: poiIcon}).addTo(map);
+            var bergamostazione = L.marker([45.691537452238116, 9.675102151581292], {icon: poiIcon}).addTo(map);
+            var bergamocolleaperto = L.marker([45.706527258016656, 9.658338040181997], {icon: poiIcon}).addTo(map);
+            var curnolargovittoria = L.marker([45.690506356761006, 9.609315507717982], {icon: poiIcon}).addTo(map);
+            var curnoamicis = L.marker([45.69014996758851, 9.6062191361974], {icon: poiIcon}).addTo(map);
+            var roncolachiesa = L.marker([45.67415060752361, 9.5929588634929], {icon: poiIcon}).addTo(map);
+            var treviolomarconi = L.marker([45.67084783910289, 9.608006280048084], {icon: poiIcon}).addTo(map);
+            var svirgilio = L.marker([45.71136895940289, 9.64745939341333], {icon: poiIcon}).addTo(map);
+            var castagneta = L.marker([45.712051488644775, 9.65049367241568], {icon: poiIcon}).addTo(map);
+            var cavagnis19 = L.marker([45.71085042462556, 9.64903058245758], {icon: poiIcon}).addTo(map);
+            var cagnisbivio = L.marker([45.70957936351994, 9.657848922287851], {icon: poiIcon}).addTo(map);
+            var cavagnischiesetta = L.marker([45.70926780965239, 9.65399399746416], {icon: poiIcon}).addTo(map);
+            var cavagnisfr2 = L.marker([45.709021442875596, 9.655677262035104], {icon: poiIcon}).addTo(map);
+            var clementinaghandi= L.marker([45.691074937376264, 9.695774266966637], {icon: poiIcon}).addTo(map);
+            var donorione = L.marker([45.714327427410716, 9.691333538132612], {icon: poiIcon}).addTo(map);
+            var loretopastour = L.marker([45.69066693770428, 9.64437126696664], {icon: poiIcon}).addTo(map);
+            var ospedale = L.marker([45.68759533668883, 9.638602062952062], {icon: poiIcon}).addTo(map);
+            var ospedalec1 = L.marker([45.6877303813259, 9.638254061580941], {icon: poiIcon}).addTo(map);
+            var cimiteroloreto = L.marker([45.69846043804362, 9.69014280929586], {icon: poiIcon}).addTo(map);
+            var viabattisti = L.marker([45.70337988391687, 9.677496351624848], {icon: poiIcon}).addTo(map);
+            var sannaghislandi = L.marker([45.69664043926305, 9.6834935381314], {icon: poiIcon}).addTo(map);
+            var cimiteroclemetina = L.marker([445.6983518130658, 9.690474995802786], {icon: poiIcon}).addTo(map);
+            var tiraboschi6 = L.marker([45.69389902547851, 9.670069892688515], {icon: poiIcon}).addTo(map);
+            var borgopalazzo163 = L.marker([45.69228451330357, 9.697277909295407], {icon: poiIcon}).addTo(map);
+            var borgopalazzo69 = L.marker([45.695487946243084, 9.685209809295683], {icon: poiIcon}).addTo(map);
+            var borgopalazzo124= L.marker([45.693159441595235, 9.693604639980771], {icon: poiIcon}).addTo(map);
+            var borgopalazzoclementina = L.marker([45.694325492433514, 9.689612453473892], {icon: poiIcon}).addTo(map);
+            var borgoscaterina= L.marker([45.70505684860506, 9.681127011145902], {icon: poiIcon}).addTo(map);
+            var borgoscaterina75= L.marker([45.70559546351828, 9.684158453474604], {icon: poiIcon}).addTo(map);
+            var broseta112 = L.marker([45.693541911618645, 9.647893639980778], {icon: poiIcon}).addTo(map);
+            var camozzi122 = L.marker([45.696653798517666, 9.675642061893422], {icon: poiIcon}).addTo(map);
+    
+            // Aggiungi una popup al marker del POI (opzionale)
+            Antenna.bindPopup('Dalmine Antenna').openPopup();
+            donCortesi.bindPopup('SABBIO via Don Cortesi Scuole elementari').openPopup();
+            donSeghezzi.bindPopup('DALMINE via Don Seghezzi fr.6').openPopup();
+            Beltremelli.bindPopup('DALMINE via Beltramelli fr. Asilo').openPopup();
+            levate.bindPopup('Sabbio v.Levate, 1').openPopup();
+            A4.bindPopup('Fermata A4').openPopup();
+            betelli.bindPopup('DALMINE via Betelli 57 Supermercato').openPopup();
+            viamariano.bindPopup('Dalmine - via Mariano/Orti').openPopup();
+            betelli21.bindPopup('DALMINE via Betelli 21').openPopup();
+            locresia.bindPopup('Dalmine, Locatelli/Resia').openPopup();
+            tiraboschi.bindPopup('Dalmine, Tiraboschi 16-A').openPopup();
+            pirovano.bindPopup('DALMINE via Pirovano fr.5').openPopup();
+            abruzzo.bindPopup('Dalmine, SS525/Abruzzo').openPopup();
+            pesenti.bindPopup('DALMINE via Pesenti 1').openPopup();
+            locatelli11.bindPopup('DALMINE via Locatelli fr.11b').openPopup();
+            velodromo.bindPopup('Dalmine, Velodromo').openPopup();
+            ABB.bindPopup('Dalmine - s.s. 525 ABB SACE').openPopup();
+            SS525.bindPopup('Dalmine, SS525').openPopup();
+            viamarconi.bindPopup('DALMINE via Marconi 6').openPopup();
+            viaverdi.bindPopup('Dalmine Via Verdi').openPopup();
+            viaverdiitis.bindPopup('Dalmine Via Verdi-ITIS').openPopup();
+            alme.bindPopup('Alme S.P.Villa d Almè-Dalmine Fr.61').openPopup();
+            paladinaghiaie.bindPopup('PALADINA GHIAIE via del Brembo').openPopup();
+            paladinasobreno.bindPopup('PALADINA Sombreno via S.Fermo e Rustico').openPopup();
+            paladinacarminati6.bindPopup('PALADINA via Don Carminati 6').openPopup();
+            paladinacarminati.bindPopup('PALADINA via Don Carminati').openPopup();
+            paladinalpini.bindPopup('PALADINA via degli Alpini 3/5').openPopup();
+            paladinagalilei.bindPopup('PALADINA via G.Galilei 3').openPopup();
+            valbrembomatteotti.bindPopup('VALBREMBO via Matteotti parco').openPopup();
+            valbrembocornelle.bindPopup('VALBREMBO CORNELLE corso Europa Unita 11').openPopup();
+            paladinanovembre.bindPopup('Paladina - via IV novembre').openPopup();
+            paladinabolis.bindPopup('PALADINA via Bolis fr.13').openPopup();
+            valbremboroma.bindPopup('VALBREMBO via Roma 12').openPopup();
+            briolopaglia.bindPopup('BRIOLO via Paglia fr.7').openPopup();
+            PsPberizzi.bindPopup('Ponte S.Pietro - via berizzi (itc)').openPopup();
+            PsPvittemanuele.bindPopup('PONTE S.PIETRO via Vittorio Emanuele 58').openPopup();
+            Curnoemilia.bindPopup('CURNO via Emilia fr. scuole').openPopup();
+            valbrembomoro.bindPopup('VALBREMBO via A.Moro fr. parcheggio').openPopup();
+            mozzomozzi.bindPopup('MOZZO via Mozzi').openPopup();
+            mozzoalighieri.bindPopup('MOZZO via Dante Alighieri').openPopup();
+            crocettemozzo.bindPopup('CURNO via per Mozzo via Crocette').openPopup();
+            crocettecurno.bindPopup('Curno, Lecco fr. 11/Crocette').openPopup();
+            valbrembosombreno.bindPopup('VALBREMBO via Sombreno 27/29 villino').openPopup();
+            madonnadelbosco.bindPopup('via Madonna del Bosco Chiesa').openPopup();
+            mottolichiesa.bindPopup('via Mattioli Chiesa').openPopup();
+            bergamocrocerossa.bindPopup('Bergamo - V.Broseta, 133 - Croce Rossa').openPopup();
+            bergamoportanuova.bindPopup('Porta Nuova').openPopup();
+            bergamostazione.bindPopup('STAZIONE p.le Marconi per Città Alta').openPopup();
+            bergamocolleaperto.bindPopup('Colle Aperto').openPopup();
+            curnolargovittoria.bindPopup('CURNO largo Vittoria fr. Chiesa').openPopup();
+            curnoamicis.bindPopup('CURNO via De Amicis 16').openPopup();
+            roncolachiesa.bindPopup('RONCOLA via Ambrosioni fr. Chiesa').openPopup();
+            treviolomarconi.bindPopup('TREVIOLO via Marconi fr. via Rillosi').openPopup();
+            svirgilio.bindPopup('via S.Vigilio Belvedere').openPopup();    
+            castagneta.bindPopup('via Castagneta Valletta').openPopup();
+            cavagnis19.bindPopup('via Cavagnis 19').openPopup();   
+            cagnisbivio.bindPopup('via Cavagnis bivio Castagneta').openPopup(); 
+            cavagnischiesetta.bindPopup('via Cavagnis fr.12a Chiesetta').openPopup(); 
+            cavagnisfr2.bindPopup('via Cavagnis fr.2').openPopup(); 
+            clementinaghandi.bindPopup('CLEMENTINA via Gandhi').openPopup();
+            donorione.bindPopup('DON ORIONE via Don Orione via Goisis').openPopup(); 
+            loretopastour.bindPopup('LORETO via Pasteur fr.1A').openPopup(); 
+            ospedale.bindPopup('Ospedale').openPopup(); 
+            ospedalec1.bindPopup('OSPEDALE C1 via Brambilla Emanuela per Loreto').openPopup(); 
+            cimiteroloreto.bindPopup('P.LE CIMITERO per Loreto').openPopup(); 
+            viabattisti.bindPopup('Bergamo - via battisti 7').openPopup();
+            sannaghislandi.bindPopup('PIAZZA S.ANNA via Ghislandi 2').openPopup(); 
+            cimiteroclemetina.bindPopup('piazzale Cimitero per Clementina').openPopup(); 
+            tiraboschi6.bindPopup('Bergamo, Tiraboschi 6/Porta Nuova').openPopup(); 
+            borgopalazzo163.bindPopup('Via Borgo Palazzo, 130 (ASL)').openPopup(); 
+            borgopalazzo69.bindPopup('via Borgo Palazzo 69 TEB').openPopup(); 
+            borgopalazzo124.bindPopup('via Borgo Palazzo fr.124').openPopup(); 
+            borgopalazzoclementina.bindPopup('Bergamo - via borgo palazzo, 93').openPopup(); 
+            borgoscaterina.bindPopup('via Borgo S. Caterina 47').openPopup(); 
+            borgoscaterina75.bindPopup('via Borgo S. Caterina 75a').openPopup(); 
+            camozzi122.bindPopup('via Camozzi 122').openPopup(); 
+        </script>
+    </div>
+</body>
+</html>
+        

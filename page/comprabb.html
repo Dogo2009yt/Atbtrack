@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>Atb Track - Compra Abbonamenti</title>
+    <link rel="icon" href="/img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/compraabb.css">
+    <script src="js/comprabb.js"></script>
+</head>
+<body>
+    <div class="container">
+        <a href="/">
+            <div class="home">
+                <img src="img/home_icon-icons.com_73532.svg" alt="Home" href="/">
+            </div>
+        </a>
+        <a href="/abbonamenti">
+            <div class="torna_indietro">
+                <img src="img/torna indietro.svg" alt="Torna indietro" href="/">
+            </div>
+        </a>
+        <div class="change">
+            <img src="img/cambia lingua.svg" alt="Cambiolingua" onclick="CambiaLingua()">
+            <div class="cambiolingua" id="Menucambio">
+                <a href="/abbonamenti">Italiano</a>
+                <a href="abbing.html">English</a>
+            </div>
+        </div>
+        <div class="logo">
+            <img src="/img/logo.png" class="logoimg" alt="Logo">
+        </div>
+        <a href="/faq">
+            <div class="domande">
+                <img src="img/faq.svg" alt="Faq" href="/faq">
+            </div>
+        
+        </a>
+        <div class="menu">
+            <img src="img/menu.svg" alt="menu" onclick="Menu()">
+            <div class="menuu" id="Menu">
+                <a href="/">Home</a>
+                <a href="/abbonamenti">Torna indietro</a>
+                <a onclick="CambiaLingua()">Cambia lingua</a>
+                <a href="/faq">Faq</a>
+            </div>
+        </div>
+        <a href="https://www.atb.bergamo.it/it/viaggia-con-noi/abbonamenti/tutti-gli-abbonamenti" target="_blank" id="info">Tutte le informazioni sugli abbonamenti qui</a>
+        <a ></a>
+        <div id="scegliabbo">
+            <div id="rettabb"onclick="Sceglidur()"><p id="selezdur">Seleziona la durata dell'abbonamento</p></div>
+            <div class="abb" id="Abb">
+                <a onclick="Settimanale()">Settimanale</a>
+                <a onclick="Mensile()">Mensile</a>
+                <a onclick="Annuale()">Annuale</a>
+                <a onclick="Annualestud()">Annuale studenti</a>
+                <a onclick="Annualecomuni()">Annuale studenti residenti nei Comuni convenzionati</a>
+                <a onclick="Under14()">Under 14 & Over 65 mensile</a>
+                <a onclick="Under14ann()">Under 14 & Over 65 Annuale</a>
+                <a onclick="Junior()">Junior</a>
+                <a onclick="Famiglia()">Famiglia</a>
+                <a onclick="Annualeuni()">Annuale studenti Università di Bergamo</a>
+                <a onclick="Impersonale()">Impersonale</a>
+            </div>
+        </div>
+        <div id="sceglizona">
+            <div id="rettzona"onclick="Sceglizona()"><p id="selezona">Seleziona la zona dell'abbonamento</p></div>
+            <div class="zona" id="Zona">
+                <a onclick="zona1()" id="1zona">1 Zona</a>
+                <a onclick="zona2()" id="2zone">2 Zone</a>
+                <a onclick="zonq3()" id="3zone">3 Zone</a>
+                <a onclick="zona4()" id="4zone">4 Zone</a>
+                <a onclick="zona5()" id="5zone">5 Zone</a>
+                <a onclick="zona6()" id="tutto">Intera rete</a>
+            </div>
+    </div>
+</body>
+</html>

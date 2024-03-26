@@ -1,0 +1,23 @@
+#tessera{
+    height: 360px;
+    width: 700px;
+    position: relative;
+    top:-250px;
+    left: calc(50% - 350px);
+}
+#user{
+    font-family: 'Bebas Neue', sans-serif;
+    text-decoration: none;
+    font-size: xx-large;
+    position: relative;
+    top:-500px;
+    text-align: center;
+}
+#carta{
+    font-family: 'Bebas Neue', sans-serif;
+    text-decoration: none;
+    font-size: xx-large;
+    position: relative;
+    top:-450px;
+    text-align: center;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.1/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mongodb/4.0.3/mongodb.min.js"></script>
+    <script src="node_modules/mongodb-stitch-browser-sdk/dist/umd/bundle.umd.min.js"></script>
+    <title>Atb Track - Homepage</title>
+    <script src="dist/bundle.js"></script>
+    <link rel="icon" href="/img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="/img/logo.png" class="logoimg" alt="Logo">
+        </div>
+        <div class="Abbonamenti"></div>
+        <a href="/abbonamenti" class="abbonamenti">
+            <p>Visualizza/Acquista Abbonamenti</p>
+        </a>
+        <div class="Biglietto"></div>
+        <a href="/biglietti" class="biglietto">
+            <p>Visualizza/Acquista biglietto</p>
+        </a>
+        <div class="Cercalinea"></div>
+        <a href="/cercalinea" class="cercalinea">
+            <p>Cerca Linea</p>
+        </a>
+        <div class="Cercafermata"></div>
+        <a href="/cercafermata" class="cercafermata">
+            <p>Cerca Fermata</p>
+        </a>
+        <div class="Calcolapercorso"></div>
+        <a href="/calcolapercorso" class="calcolapercorso">
+            <p>Calcola percorso</p>
+        </a>
+        <a id="reg" href="/registrati">Registrati</a>
+        <a id="acc" href="/accedi">Accedi</a>
+        <div class="menu">
+            <img src="img/omino.png" alt="area personale" onclick="Menu()" id="area">
+            <div class="menuu" id="Menu" style="display: none;">
+                <h3 id="username">Ciao</h3>
+                <a href="/areapersonale">Area personale</a>
+                <a onclick="logout()">Disconnettiti</a> 
+            </div>
+        </div>
+        
+        
+    </div>
+</body>
+</html>
+
+

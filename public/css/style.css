@@ -1,0 +1,333 @@
+body {
+    background-color: #E80101;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.logo {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    top: -20px;
+    background-color: white;
+    border-radius: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* ... altre regole CSS ... */
+
+.Abbonamenti{
+    box-sizing: border-box;
+    width: 700px;
+    height: 50px;
+    border-radius: 17px;
+    background-color: white;
+    position: relative;
+    top: 150px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex; /* Abilita il modello di flessione */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+    @media (max-width: 705px) {
+        width: 80%; /* Adatta la larghezza per schermi più piccoli */
+        top:200px
+    }
+    
+}
+.Abbonamenti p {
+    margin: 0; /* Rimuovi il margine predefinito del paragrafo */
+}
+.abbonamenti{
+    position:relative;
+    top: 50px;
+    font-size:xx-large;
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    @media (max-width: 705px) {
+        top:110px;
+        font-size: 25px; /* Adatta la dimensione del testo */
+    }
+
+}
+.Biglietto{
+    box-sizing: border-box;
+    width: 700px;
+    height: 50px;
+    border-radius: 17px;
+    background-color: white;
+    position: relative;
+    top: 75px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex; /* Abilita il modello di flessione */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+    @media (max-width: 705px) {
+        width: 80%; /* Adatta la larghezza per schermi più piccoli */
+        top: 150px;
+    }
+    
+}
+.Biglietto p {
+    margin: 0; /* Rimuovi il margine predefinito del paragrafo */
+}
+.biglietto{
+    position:relative;
+    top: -25px;
+    font-size:xx-large;
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    @media (max-width: 705px) {
+        top:60px;
+        font-size: 25px; /* Adatta la dimensione del testo */
+    }
+}
+.Cercalinea{
+    box-sizing: border-box;
+    width: 700px;
+    height: 50px;
+    border-radius: 17px;
+    background-color: white;
+    position: relative;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex; /* Abilita il modello di flessione */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+    @media (max-width: 705px) {
+        width: 80%; /* Adatta la larghezza per schermi più piccoli */
+        top:100px;
+    }
+    
+}
+.Cercalinea p {
+    margin: 0; /* Rimuovi il margine predefinito del paragrafo */
+}
+.cercalinea{
+    position:relative;
+    top: -100px;
+    font-size:xx-large;
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    @media (max-width: 705px) {
+        top:10px;
+        font-size: 25px; /* Adatta la dimensione del testo */
+    }
+}
+.Cercafermata{
+    box-sizing: border-box;
+    width: 700px;
+    height: 50px;
+    border-radius: 17px;
+    background-color: white;
+    position: relative;
+    top: -75px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex; /* Abilita il modello di flessione */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+    @media (max-width: 705px) {
+        width: 80%; /* Adatta la larghezza per schermi più piccoli */
+        top:50px;
+    }
+    
+}
+.Cercafermata p {
+    margin: 0; /* Rimuovi il margine predefinito del paragrafo */
+}
+.cercafermata{
+    position:relative;
+    bottom: 175px;
+    font-size:xx-large;
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    @media (max-width: 705px) {
+        top:-40px;
+        font-size: 25px; /* Adatta la dimensione del testo */
+    }
+}
+.Calcolapercorso{
+    box-sizing: border-box;
+    width: 700px;
+    height: 50px;
+    border-radius: 17px;
+    background-color: white;
+    position: relative;
+    top: -150px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex; /* Abilita il modello di flessione */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+    @media (max-width: 705px) {
+        width: 80%; /* Adatta la larghezza per schermi più piccoli */
+        top:0px
+    }
+    
+}
+.Calcolapercorso p {
+    margin: 0; /* Rimuovi il margine predefinito del paragrafo */
+}
+.calcolapercorso{
+    position:relative;
+    top: -250px;
+    font-size:xx-large;
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    @media (max-width: 705px) {
+        top:-90px;
+        font-size: 25px; /* Adatta la dimensione del testo */
+    }
+
+}
+#acc{
+    position: relative;
+    font-size:xx-large;
+    left:-30px;
+    top:-855px;
+    color: inherit;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    cursor: pointer;
+}
+#reg{
+    position: relative;
+    font-size:xx-large;
+    right: -1180px;
+    top:-855px;
+    color: inherit;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    color: black;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 480px) {
+    #acc, #reg {
+        font-size: medium;
+        position: relative;
+    }
+
+    #reg {
+        top: -730px;
+        left: 320px;
+    }
+    #acc{
+        top: -730px;
+        left: -30px;
+    }
+    #area{
+        display: none; /* Nasconde l'immagine per impostazione predefinita */
+        width: 8%;     /* Imposta la larghezza desiderata in percentuale */
+        height: auto;  /* Imposta l'altezza in modo che l'immagine mantenga le proporzioni originali */
+        position: absolute;
+        right: 20px;     /* Imposta la posizione desiderata in percentuale */
+        top: -730px;     /* Imposta la posizione desiderata in percentuale */
+    }
+    .menuu{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 200px;
+        background-color: #f9f9f9;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .menuu a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        top: 100px;
+    }
+    
+    .menuu a:hover {
+        background-color: #f1f1f1;
+    }
+}
+.menu {
+    width: 100%;
+    height: 50%;
+    position: relative; /* Importante per posizionare l'immagine all'interno di .menu */
+}
+
+.menu img {
+    display: none; /* Nasconde l'immagine per impostazione predefinita */
+    width: 4%;     /* Imposta la larghezza desiderata in percentuale */
+    height: auto;  /* Imposta l'altezza in modo che l'immagine mantenga le proporzioni originali */
+    position: absolute;
+    right: 5%;     /* Imposta la posizione desiderata in percentuale */
+    top: -865px;
+    cursor: pointer;     /* Imposta la posizione desiderata in percentuale */
+}
+.menuu{
+    display: none;
+    position: absolute;
+    top: -800px; /* Posiziona il menu sotto l'immagine */
+    right: 50px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.menuu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+.menuu h3 {
+    color: black;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+.menuu a:hover {
+    background-color: #f1f1f1;
+}

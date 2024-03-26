@@ -1,0 +1,312 @@
+body {
+    background-color: #E80101;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    align-items: center;
+}
+
+.logo {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    top: -20px;
+    background-color: white;
+    border-radius: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+
+.home img {
+    width: 8%; /* Cambiato a 50% per ridurre le dimensioni */
+    height: 8%; /* Cambiato a 50% per ridurre le dimensioni */
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    object-fit: contain;
+    z-index: 10;
+}
+.torna_indietro img {
+    width: 8%; /* Cambiato a 50% per ridurre le dimensioni */
+    height: 8%; /* Cambiato a 50% per ridurre le dimensioni */
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    object-fit: contain;
+    z-index: 10;
+}
+.change img {
+    width: 8%; /* Cambiato a 50% per ridurre le dimensioni */
+    height: 8%; /* Cambiato a 50% per ridurre le dimensioni */
+    position: absolute;
+    top: 10px;
+    right: 100px;
+    object-fit: contain;
+    z-index: 10;
+}
+/* Aggiungi stili per nascondere il menu a tendina inizialmente */
+.cambiolingua {
+    display: none;
+    position: absolute;
+    top: 10%; /* Posiziona il menu sotto l'immagine */
+    right: 100px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.cambiolingua a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.cambiolingua a:hover {
+    background-color: #f1f1f1;
+}
+.domande img {
+    width:7%; /* Cambiato a 50% per ridurre le dimensioni */
+    height: 7%; /* Cambiato a 50% per ridurre le dimensioni */
+    position: absolute;
+    top: 10px;
+    left: 100px;
+    object-fit: contain;
+    z-index: 10;
+}
+.sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.sidebar a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: #f1f1f1;
+}
+.menu {
+    width: 100%;
+    height: 50%;
+    position: relative; /* Importante per posizionare l'immagine all'interno di .menu */
+}
+
+.menu img {
+    display: none; /* Nasconde l'immagine per impostazione predefinita */
+    width: 8%;     /* Imposta la larghezza desiderata in percentuale */
+    height: auto;  /* Imposta l'altezza in modo che l'immagine mantenga le proporzioni originali */
+    position: absolute;
+    right: 2%;     /* Imposta la posizione desiderata in percentuale */
+    top: -32%;     /* Imposta la posizione desiderata in percentuale */
+}
+.menuu{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 200px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.menuu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.menuu a:hover {
+    background-color: #f1f1f1;
+}
+#Abb {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+}
+
+#Abb a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: medium;
+    font-family: 'Bebas Neue', sans-serif;
+    cursor: pointer;
+    
+}
+
+#Abb a:hover {
+    background-color: #f1f1f1;
+}
+#scegliabbo {
+    width: 100%;
+    height: 30%;
+    position: relative;
+    display: inline-block;
+}
+
+#rettabb {
+    width: 500px;
+    height: 70px;
+    background-color: white;
+    z-index: 10;
+    position: relative;
+    top: -250px; /* Adjusted to center the div vertically */
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    border-radius: 17px;/* Center the div horizontally */
+    cursor: pointer;
+    margin: 0;
+    line-height: 70px;
+    text-align: center;
+    border: 2px;
+}
+#rettabb p{
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: xx-large;
+}
+#info{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: xx-large;
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    top: 110px;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Traslazione del 50% rispetto a ciascun asse */
+    text-align: center;
+}
+#Zona{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: -90px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+}
+
+#Zona a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: medium;
+    font-family: 'Bebas Neue', sans-serif;
+    cursor: pointer;
+    
+}
+
+#Zona a:hover {
+    background-color: #f1f1f1;
+}
+#sceglizona {
+    width: 100%;
+    height: 30%;
+    position: relative;
+    display: inline-block;
+}
+
+#rettzona {
+    display: block;
+    width: 500px;
+    height: 70px;
+    background-color: white;
+    z-index: 10;
+    position: relative;
+    top: -250px; /* Adjusted to center the div vertically */
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    border-radius: 17px;/* Center the div horizontally */
+    cursor: pointer;
+    margin: 0;
+    line-height: 70px;
+    text-align: center;
+    border: 2px;
+}
+#rettzona p{
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: xx-large;
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .menu img {
+        display: block; /* Nasconde l'immagine per impostazione predefinita */
+        width: 8%;     /* Imposta la larghezza desiderata in percentuale */
+        height: auto;  /* Imposta l'altezza in modo che l'immagine mantenga le proporzioni originali */
+        position: absolute;
+        right: 2%;     /* Imposta la posizione desiderata in percentuale */
+        top: -15%;     /* Imposta la posizione desiderata in percentuale */
+    }
+    .domande,
+    .home,
+    .change img,
+    .torna_indietro {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+    .change{
+        display: block;
+    }
+}
+@media only screen and (max-device-width: 480px) {
+    .menu img {
+        display: block; /* Nasconde l'immagine per impostazione predefinita */
+        width: 10%;    /* Imposta la larghezza desiderata in percentuale */
+        height: auto;  /* Imposta l'altezza in modo che l'immagine mantenga le proporzioni originali */
+        position: absolute;
+        right: 5%;     /* Imposta la posizione desiderata in percentuale */
+        top: -20%;     /* Imposta la posizione desiderata in percentuale */
+    }
+
+    .domande,
+    .home,
+    .change img,
+    .torna_indietro {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+    .change {
+        position: fixed;
+        top:90px;
+        right: -95px; /* Modifica la posizione per adattarsi a schermi più piccoli */
+    }
+}

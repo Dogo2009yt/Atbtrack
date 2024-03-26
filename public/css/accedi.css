@@ -1,0 +1,180 @@
+#user {
+    width: 400px;
+    height: 50px;
+    font-size: large;
+    font-family:sans-serif;
+    position: absolute;
+    left: 60%;
+    transform: translateX(-50%);
+    top:250px;
+    text-align: center; /* Per entrare il testo all'interno */
+}
+
+#ulab {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: xx-large;
+    margin-right: 20px;
+    position: absolute;
+    left: 25%;
+    top:257px;
+}
+#pass {
+    width: 400px;
+    height: 50px;
+    font-size: large;
+    font-family:sans-serif;
+    position: absolute;
+    left: 60%;
+    transform: translateX(-50%);
+    top:350px;
+    text-align: center; /* Per entrare il testo all'interno */
+}
+
+#plab {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: xx-large;
+    margin-right: 20px;
+    position: absolute;
+    left: 24.5%;
+    top:357px;
+}
+#submit{
+    width: 200px;
+    height: 40px;
+    font-size: large;
+    font-family: 'Bebas Neue', sans-serif;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top:430px;
+    text-align: center; /* Per entrare il testo all'interno */
+}
+#slab {
+    display: none;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: xx-large;
+    margin-right: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top:200px;
+}
+#fallo{
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    color: black;
+    position: absolute;
+    left:25%;
+    top:440px;
+}
+#problemi{
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    position: absolute;
+    left:25%;
+    top:490px;
+}
+#icona{
+    width: 26px;
+    position: absolute;
+    right: 350px;
+    bottom: calc(227.5px - 13px);
+    cursor: pointer;
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+   
+    #user {
+        width: 70%;
+        height: 50px;
+        font-size: large;
+        font-family: sans-serif;
+        position: relative;
+        margin: 0 auto;
+        margin-top: 50px; /* Spazio dalla cima della pagina */
+        text-align: center;
+    }
+    
+    #ulab {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: large;
+        margin-top: 20px;
+    }
+    
+    #pass {
+        width: 70%;
+        height: 50px;
+        font-size: large;
+        font-family: sans-serif;
+        position: relative;
+        margin: 0 auto;
+        margin-top: 20px;
+        padding-right: 45px;
+    }
+    
+    #plab {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: large;
+        margin-top: 20px;
+    }
+    
+    #submit {
+        width: 50%;
+        height: 40px;
+        font-size: large;
+        font-family: 'Bebas Neue', sans-serif;
+        position: relative;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    
+    #fallo {
+        text-decoration: none;
+        font-family: 'Bebas Neue', sans-serif;
+        color: black;
+        margin-top: 20px;
+    }
+    
+    #icona {
+        width: 26px;
+        position: absolute;
+        right: 10px; /* Spazio dal lato destro */
+        bottom: 10px; /* Spazio dal basso */
+        cursor: pointer;
+    }
+    
+
+}
+@media only screen and (max-width: 480px) {
+    #user, #pass {
+        width: 40%;
+        height: 2%;
+        font-size: small;
+        float: right; /* Posiziona le caselle di testo a destra */
+    }
+    
+    #ulab, #plab {
+        font-size: medium;
+        width: 50%;
+        float: left; /* Posiziona le label a sinistra */
+    }
+    
+    #submit {
+        width: 20%;
+        height: 2%;
+        font-size: small;
+        float: right; /* Posiziona il pulsante a destra */
+    }
+    
+    #fallo {
+        font-size: small;
+        top: 400px;
+        left:110px;
+    }
+    
+    #icona {
+        width: 16px;
+        bottom: 450px;
+        right: 80px;
+    }
+}
+

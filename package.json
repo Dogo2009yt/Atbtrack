@@ -1,0 +1,48 @@
+{
+  "name": "atbtrack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production"
+  },
+  "author": "Diego Bertoletti",
+  "license": "ISC",
+  "dependencies": {
+    "assert": "^2.1.0",
+    "axios": "^1.6.5",
+    "body-parser": "^1.20.2",
+    "browserify-fs": "^1.0.0",
+    "browserify-zlib": "^0.2.0",
+    "buffer": "^6.0.3",
+    "cors": "^2.8.5",
+    "crypto-browserify": "^3.12.0",
+    "ejs": "^3.1.9",
+    "express": "^4.18.3",
+    "gmail-send": "^1.8.14",
+    "https-browserify": "^1.0.0",
+    "i18n": "^0.15.1",
+    "leaflet": "^1.9.4",
+    "leaflet-polylinedecorator": "^1.6.0",
+    "lowdb": "^7.0.1",
+    "mongodb": "^6.5.0",
+    "mongodb-stitch-browser-sdk": "^4.3.0",
+    "mongoose": "^8.2.2",
+    "net": "^1.0.2",
+    "nodemailer": "^6.9.12",
+    "path-browserify": "^1.0.1",
+    "querystring-es3": "^0.2.1",
+    "serve-favicon": "^2.5.0",
+    "statuses": "^2.0.1",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "underscore": "^1.13.6",
+    "url": "^0.11.3",
+    "util": "^0.12.5"
+  },
+  "devDependencies": {
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}

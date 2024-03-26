@@ -1,0 +1,396 @@
+body {
+    background-color: #E80101;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.logo {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    top: -20px;
+    background-color: white;
+    border-radius: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+
+.home img {
+    width: 8%; /* Cambiato a 50% per ridurre le dimensioni */
+    height: 8%; /* Cambiato a 50% per ridurre le dimensioni */
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    object-fit: contain;
+    z-index: 10;
+}
+.torna_indietro img {
+    width: 8%; /* Cambiato a 50% per ridurre le dimensioni */
+    height: 8%; /* Cambiato a 50% per ridurre le dimensioni */
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    object-fit: contain;
+    z-index: 10;
+}
+.change img {
+    width: 8%; /* Cambiato a 50% per ridurre le dimensioni */
+    height: 8%; /* Cambiato a 50% per ridurre le dimensioni */
+    position: absolute;
+    top: 10px;
+    right: 100px;
+    object-fit: contain;
+    z-index: 10;
+}
+/* Aggiungi stili per nascondere il menu a tendina inizialmente */
+.cambiolingua {
+    display: none;
+    position: absolute;
+    top: 10%; /* Posiziona il menu sotto l'immagine */
+    right: 100px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.cambiolingua a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.cambiolingua a:hover {
+    background-color: #f1f1f1;
+}
+.domande img {
+    width:7%; /* Cambiato a 50% per ridurre le dimensioni */
+    height: 7%; /* Cambiato a 50% per ridurre le dimensioni */
+    position: absolute;
+    top: 10px;
+    left: 100px;
+    object-fit: contain;
+    z-index: 10;
+}
+/* Stili globali per il menu a tendina */
+.sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.sidebar a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: #f1f1f1;
+}
+.menu {
+    width: 100%;
+    height: 50%;
+    position: relative; /* Importante per posizionare l'immagine all'interno di .menu */
+}
+
+.menu img {
+    display: none; /* Nasconde l'immagine per impostazione predefinita */
+    width: 8%;     /* Imposta la larghezza desiderata in percentuale */
+    height: auto;  /* Imposta l'altezza in modo che l'immagine mantenga le proporzioni originali */
+    position: absolute;
+    right: 2%;     /* Imposta la posizione desiderata in percentuale */
+    top: -32%;     /* Imposta la posizione desiderata in percentuale */
+}
+.menuu{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 200px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.menuu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.menuu a:hover {
+    background-color: #f1f1f1;
+}
+/* Stili globali */
+/* ... */
+.cercabutton {
+    width: 500px;
+    height: 70px;
+    background-color: red;
+    position: absolute;
+    bottom: 60px;
+    left: calc(50% - 250px);
+    z-index: 3;
+    border-radius: 17px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.selezionalinea{
+    font-family: 'Bebas Neue', sans-serif;
+    text-decoration: none;
+    font-size: xx-large;
+    color: white;
+    position: relative;
+    top:15px;
+    text-align: center;
+}
+.attivi{
+    background-color: white;
+    height: 50px;
+    width: 500px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top:-250px;
+    left:calc(50% - 250px);
+}
+.attivi p{
+    font-family: 'Bebas Neue', sans-serif;
+    text-decoration: none;
+    font-size: xx-large;
+    color: black;
+    text-align: center;
+    position: absolute;
+    top: -25px;
+}
+.attivo{
+    background-color: #C8B8B8;
+    height: 125px;
+    width: 500px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top:-225px;
+    left:calc(50% - 250px);
+}
+#tessera{
+    font-family: 'Bebas Neue', sans-serif;
+    text-decoration: none;
+    font-size: xx-large;
+    color: black;
+    text-align: center;
+    position: absolute;
+    top: -5px;
+    resize: both;
+}
+#scadenza{
+    font-family: 'Bebas Neue', sans-serif;
+    text-decoration: none;
+    font-size: xx-large;
+    color: black;
+    text-align: center;
+    position: absolute;
+    top: 40px;
+    resize: both;
+}
+#Scad{
+    font-family: 'Bebas Neue', sans-serif;
+    text-decoration: none;
+    font-size: xx-large;
+    color: black;
+    text-align: center;
+    position: relative;
+    top:-300px;
+}
+.compra{
+    background-color: white;
+    height: 50px;
+    width: 500px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top:-200px;
+    left:calc(50% - 250px);
+    cursor: pointer;
+}
+.compra a{
+    font-family: 'Bebas Neue', sans-serif;
+    text-decoration: none;
+    font-size: xx-large;
+    color: black;
+    text-align: center;
+    position: absolute;
+    top: 5px;
+    
+}
+.scaduti{
+    background-color: white;
+    height: 50px;
+    width: 500px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top:-175px;
+    left:calc(50% - 250px);
+    cursor: pointer;
+}
+.scaduti a{
+    font-family: 'Bebas Neue', sans-serif;
+    text-decoration: none;
+    font-size: xx-large;
+    color: black;
+    text-align: center;
+    position: absolute;
+    top: 5px;
+    
+}
+#accedi{
+    display: none;
+    font-size: xx-large;
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: center;
+    position: relative;
+    top:-200px;
+    color: white;
+}
+#accedii{
+    display: none;
+    position: relative;
+    font-size:xx-large;
+    left:550px;
+    top:-150px;
+    color: inherit;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    cursor: pointer;
+    color: white;
+}
+#registrati{
+    display: none;
+    position: relative;
+    font-size:xx-large;
+    right: -720px;
+    top:-190px;
+    color: inherit;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    color: white;
+    cursor: pointer;
+}
+/* Stili specifici per dispositivi iPad */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .menu img {
+        display: block; /* Nasconde l'immagine per impostazione predefinita */
+        width: 8%;     /* Imposta la larghezza desiderata in percentuale */
+        height: auto;  /* Imposta l'altezza in modo che l'immagine mantenga le proporzioni originali */
+        position: absolute;
+        right: 2%;     /* Imposta la posizione desiderata in percentuale */
+        top: -15%;     /* Imposta la posizione desiderata in percentuale */
+    }
+    .domande,
+    .home,
+    .change img,
+    .torna_indietro {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+    .change{
+        display: block;
+    }
+    .cercabutton{
+        width: 50%;
+        height: 10%;
+    }
+    .selezionalinea{
+        font-size: 60px;
+        top:30px;
+    }
+
+
+}
+@media only screen and (max-device-width: 480px) {
+    .menu img {
+        display: block; /* Nasconde l'immagine per impostazione predefinita */
+        width: 10%;    /* Imposta la larghezza desiderata in percentuale */
+        height: auto;  /* Imposta l'altezza in modo che l'immagine mantenga le proporzioni originali */
+        position: absolute;
+        right: 5%;     /* Imposta la posizione desiderata in percentuale */
+        top: -20%;     /* Imposta la posizione desiderata in percentuale */
+    }
+
+    .domande,
+    .home,
+    .change img,
+    .torna_indietro {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+    .change {
+        position: fixed;
+        top:90px;
+        right: -95px; /* Modifica la posizione per adattarsi a schermi più piccoli */
+    }
+    .cercabutton{
+        width: 50%;
+        height: 10%;
+        position: relative;
+        left:25%;
+        bottom:-150px;
+    }
+    .attivi,
+    .scaduti,
+    .attivo,
+    .compra{
+        width: 80%;
+        left: 40px;
+    }
+    .attivi p ,
+    .scaduti a,
+    .attivo p ,
+    .compra a{
+       font-size: x-large;
+    }
+}
+
+
+
+
+    
+
+
+
+
+
+
+
