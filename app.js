@@ -13,10 +13,7 @@ const options = {
 const server = https.createServer(options, app);
 const PORT = 3000;
 
-server.listen(PORT, () => {
-  console.log(`Server listening on https://localhost:${PORT}`);
-});
-
+app.listen(process.env.PORT || port, () => console.log(`Listening on port ${port}`))
 
 const faviconPath = path.join(__dirname, 'public', 'img', 'icon.png');
 
