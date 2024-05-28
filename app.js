@@ -11,9 +11,12 @@ const options = {
 };
 
 const server = https.createServer(options, app);
-const PORT = 5000;
+const PORT = 3000;
 
-app.listen(process.env.PORT || port, () => console.log(`Listening on port ${port}`))
+server.listen(PORT, () => {
+  console.log(`Server listening on https://localhost:${PORT}`);
+});
+
 
 const faviconPath = path.join(__dirname, 'public', 'img', 'icon.png');
 
@@ -98,10 +101,3 @@ app.get('/metodipagamento', async (req, res) => {
 app.get('/atbcard', async (req, res) => {
   res.sendFile(path.join(__dirname, 'page', 'atbcard.html'));
 });
-
-
-
-
-
-
-
